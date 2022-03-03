@@ -1,0 +1,42 @@
+<head>
+    <link rel="stylesheet" href="../static/css/stylecontact.css">
+</head>
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1> Contact Us</h1>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Bacon Ipsum</h2>
+        <p>Bacon ipsum dolor sit amet bresaola shoulder ribeye jerky tongue andouille kevin meatloaf fatback shank bacon
+            turkey turducken spare ribs chuck. Porchetta prosciutto pork chop, jowl andouille tri-tip rump kielbasa.
+            Capicola ground round cow, drumstick shankle turducken pastrami. Flank bresaola meatball doner short ribs
+            beef ribs ham hock pancetta. Prosciutto chuck andouille, spare ribs pork loin turkey jowl pastrami
+            landjaeger corned beef doner tail strip steak. Brisket rump shank, doner pork chop leberkas turducken
+            tri-tip ribeye shoulder spare ribs.</p>
+    </div>
+    
+    <section class="contact">
+        <hr>
+        <h2 class="centered">Contact Us</h2>
+        <div class="form" >
+            <form method="post" action="/contact">
+                {% csrf_token %}
+            <input class="form-input" type="text" name="name" id="name" placeholder="Enter your Name: ">
+            <input class="form-input" type="tel" name="phone" id="phone" placeholder="Enter your Contact no.: ">
+            <input class="form-input" type="email" name="email" id="email" placeholder="Enter your Email: ">
+            <textarea class="form-input" type="text" name="desc" id="text" cols="30" rows="8"
+                placeholder="Elaborate your Concern: "></textarea>
+            <button class="btndark">Submit</button>
+            <button class="btndark">Reset</button>
+            </form>
+        </div>
+    </section>
+    </section>
+</body>
+{% endblock body %}

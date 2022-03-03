@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>Login Form</header>
+    <form method="post" action="/login">
+      {% csrf_token %}
+      <div class="field name" action="/login">
+        <div class="input-area">
+          <input type="text" name="username" placeholder="Username">
+          <i class="icon fas fa-user"></i>
+        </div>
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input type="password" name="password"placeholder="Password">
+          <i class="icon fas fa-lock"></i>
+        </div>
+      </div>
+      <div class="pass-txt">
+        <a href="#">Got issues?</a>
+      </div>
+      <input class='dropbtn' type="submit" value="Login">
+    </form>
+
+    <div class="sign-txt">Not a member yet?<br>
+      <a href="#"><small>Sign-up using credentials now</small> </a>
+    </div>
+  </div>
+</body>
+
+</html>

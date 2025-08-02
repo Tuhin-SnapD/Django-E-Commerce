@@ -1,67 +1,483 @@
-<head>
-<link rel="stylesheet" href="../static/css/styleabout.css">
-</head>
 {% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="../static/css/styleabout.css">
+{% endblock head %}
 {% block title %}About{% endblock title %}
 {% block body %}
-<body>
-  <div class="jumbotron">
+
+<!-- Hero Section -->
+<section class="about-hero">
     <div class="container">
-        <h1> About Us</h1>
-    </div>
-</div>
-<div class="container">
-    <h2>Bacon Ipsum</h2>
-    <p>Bacon ipsum dolor sit amet bresaola shoulder ribeye jerky tongue andouille kevin meatloaf fatback shank bacon
-        turkey turducken spare ribs chuck. Porchetta prosciutto pork chop, jowl andouille tri-tip rump kielbasa.
-        Capicola ground round cow, drumstick shankle turducken pastrami. Flank bresaola meatball doner short ribs
-        beef ribs ham hock pancetta. Prosciutto chuck andouille, spare ribs pork loin turkey jowl pastrami
-        landjaeger corned beef doner tail strip steak. Brisket rump shank, doner pork chop leberkas turducken
-        tri-tip ribeye shoulder spare ribs.</p>
-</div>
-  
-  <h2 style="text-align:center">Our Team</h2>
-  <div class="row">
-    <div class="column">
-      <div class="card">
-        <img src="../static/pic.png" alt="Jane" style="width:450 ">
-        <div class="container">
-          <h2>Jane Doe</h2>
-          <p class="title">CEO & Founder</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>jane@example.com</p>
-          <p><button class="button">Contact</button></p>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1>About Clothing Colussus</h1>
+                    <p class="lead">We are passionate about bringing you the finest fashion experiences. Our journey began with a simple vision: to make quality clothing accessible to everyone.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>10+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50K+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>1000+</h3>
+                            <p>Products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image">
+                    <img src="https://picsum.photos/600/400?random=about" alt="About Us" class="img-fluid rounded">
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  
-    <div class="column">
-      <div class="card">
-        <img src="../static/pic.png" alt="Jane" style="width:450 ">
-        <div class="container">
-          <h2>Mike Ross</h2>
-          <p class="title">Art Director</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>mike@example.com</p>
-          <p><button class="button">Contact</button></p>
+</section>
+
+<!-- Mission & Vision -->
+<section class="mission-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To provide high-quality, fashionable clothing that empowers individuals to express their unique style while maintaining affordability and sustainability.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To become the leading fashion destination, known for innovation, quality, and customer satisfaction while contributing positively to the fashion industry.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  
-    <div class="column">
-      <div class="card">
-        <img src="../static/pic.png" alt="Jane" style="width:450 ">
-        <div class="container">
-          <h2>John Doe</h2>
-          <p class="title">Designer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>john@example.com</p>
-          <p><button class="button">Contact</button></p>
+</section>
+
+<!-- Values Section -->
+<section class="values-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Our Core Values</h2>
+            <p>The principles that guide everything we do</p>
         </div>
-      </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Quality</h4>
+                    <p>We never compromise on the quality of our products and materials.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Integrity</h4>
+                    <p>Honest and transparent in all our business practices and customer interactions.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>Innovation</h4>
+                    <p>Constantly evolving and adapting to the latest fashion trends and technologies.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Community</h4>
+                    <p>Building strong relationships with our customers, employees, and partners.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-      
-        
-</body>
+</section>
+
+<!-- Team Section -->
+<section class="team-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Meet Our Team</h2>
+            <p>The passionate individuals behind Clothing Colussus</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://picsum.photos/400/400?random=6" alt="Jane Doe" class="img-fluid">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Jane Doe</h4>
+                        <p class="position">CEO & Founder</p>
+                        <p class="bio">Visionary leader with 15+ years of experience in the fashion industry. Passionate about creating sustainable fashion solutions.</p>
+                        <div class="contact-info">
+                            <p><i class="fas fa-envelope"></i> jane@clothingcolussus.com</p>
+                            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://picsum.photos/400/400?random=7" alt="Mike Ross" class="img-fluid">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Mike Ross</h4>
+                        <p class="position">Creative Director</p>
+                        <p class="bio">Award-winning designer with expertise in contemporary fashion. Leads our creative vision and product development.</p>
+                        <div class="contact-info">
+                            <p><i class="fas fa-envelope"></i> mike@clothingcolussus.com</p>
+                            <p><i class="fas fa-phone"></i> +1 (555) 123-4568</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://picsum.photos/400/400?random=8" alt="John Doe" class="img-fluid">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>John Doe</h4>
+                        <p class="position">Head of Operations</p>
+                        <p class="bio">Operations expert ensuring smooth logistics and customer satisfaction. Manages our supply chain and quality control.</p>
+                        <div class="contact-info">
+                            <p><i class="fas fa-envelope"></i> john@clothingcolussus.com</p>
+                            <p><i class="fas fa-phone"></i> +1 (555) 123-4569</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Story Section -->
+<section class="story-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="story-content">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2015, Clothing Colussus began as a small boutique with a big dream. What started as a passion project has grown into one of the most trusted names in fashion retail.</p>
+                    <p>Over the years, we've expanded our collection to include everything from casual wear to formal attire, always maintaining our commitment to quality and customer satisfaction.</p>
+                    <p>Today, we serve customers across the country, offering the latest trends while staying true to our core values of quality, integrity, and innovation.</p>
+                    <a href="/contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Get in Touch
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="story-image">
+                    <img src="https://picsum.photos/600/400?random=story" alt="Our Story" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.about-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.about-hero .lead {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #fbbf24;
+}
+
+.stat-item p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.hero-image img {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.mission-section {
+    padding: 4rem 0;
+    background: white;
+    margin-bottom: 3rem;
+}
+
+.mission-card {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.mission-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.values-section {
+    padding: 4rem 0;
+    background: var(--light-bg);
+    margin-bottom: 3rem;
+}
+
+.section-header {
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--gray-600);
+    font-size: 1.1rem;
+}
+
+.value-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.value-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.team-section {
+    padding: 4rem 0;
+    background: white;
+    margin-bottom: 3rem;
+}
+
+.team-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.team-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.social-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-card:hover .social-links {
+    opacity: 1;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+.team-info {
+    padding: 1.5rem;
+}
+
+.team-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.position {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.bio {
+    color: var(--gray-600);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.contact-info p {
+    color: var(--gray-600);
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.contact-info i {
+    color: var(--secondary-color);
+    margin-right: 0.5rem;
+}
+
+.story-section {
+    padding: 4rem 0;
+    background: var(--light-bg);
+}
+
+.story-content h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-content p {
+    color: var(--gray-600);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.story-image img {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .mission-card {
+        margin-bottom: 2rem;
+    }
+    
+    .value-card {
+        margin-bottom: 2rem;
+    }
+    
+    .team-card {
+        margin-bottom: 2rem;
+    }
+}
+</style>
+
 {% endblock body %}

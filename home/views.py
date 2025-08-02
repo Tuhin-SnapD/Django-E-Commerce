@@ -41,8 +41,3 @@ def contact(request):
 
     return render(request, 'contact.html')
 
-def developer(request):
-    return render(request, 'developer.html')
-
-
-

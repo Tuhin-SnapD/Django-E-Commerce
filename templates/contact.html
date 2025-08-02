@@ -1,42 +1,455 @@
-<head>
-    <link rel="stylesheet" href="../static/css/stylecontact.css">
-</head>
 {% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="../static/css/stylecontact.css">
+{% endblock head %}
 {% block title %}Contact{% endblock title %}
 {% block body %}
 
-<body>
-    <div class="jumbotron">
-        <div class="container">
-            <h1> Contact Us</h1>
-        </div>
-    </div>
+<!-- Hero Section -->
+<section class="contact-hero">
     <div class="container">
-        <h2>Bacon Ipsum</h2>
-        <p>Bacon ipsum dolor sit amet bresaola shoulder ribeye jerky tongue andouille kevin meatloaf fatback shank bacon
-            turkey turducken spare ribs chuck. Porchetta prosciutto pork chop, jowl andouille tri-tip rump kielbasa.
-            Capicola ground round cow, drumstick shankle turducken pastrami. Flank bresaola meatball doner short ribs
-            beef ribs ham hock pancetta. Prosciutto chuck andouille, spare ribs pork loin turkey jowl pastrami
-            landjaeger corned beef doner tail strip steak. Brisket rump shank, doner pork chop leberkas turducken
-            tri-tip ribeye shoulder spare ribs.</p>
-    </div>
-    
-    <section class="contact">
-        <hr>
-        <h2 class="centered">Contact Us</h2>
-        <div class="form" >
-            <form method="post" action="/contact">
-                {% csrf_token %}
-            <input class="form-input" type="text" name="name" id="name" placeholder="Enter your Name: ">
-            <input class="form-input" type="tel" name="phone" id="phone" placeholder="Enter your Contact no.: ">
-            <input class="form-input" type="email" name="email" id="email" placeholder="Enter your Email: ">
-            <textarea class="form-input" type="text" name="desc" id="text" cols="30" rows="8"
-                placeholder="Elaborate your Concern: "></textarea>
-            <button class="btndark">Submit</button>
-            <button class="btndark">Reset</button>
-            </form>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1>Get in Touch</h1>
+                    <p class="lead">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                    <div class="contact-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>24/7 Support</h4>
+                                <p>Always here to help</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-reply"></i>
+                            <div>
+                                <h4>Quick Response</h4>
+                                <p>Within 2 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image">
+                    <img src="https://picsum.photos/600/400?random=contact" alt="Contact Us" class="img-fluid rounded">
+                </div>
+            </div>
         </div>
-    </section>
-    </section>
-</body>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="contact-info-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4>Visit Us</h4>
+                    <p>123 Fashion Street<br>Design District<br>New York, NY 10001</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>Call Us</h4>
+                    <p>+1 (555) 123-4567<br>+1 (555) 987-6543<br>Mon-Fri: 9AM-6PM</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email Us</h4>
+                    <p>info@clothingcolussus.com<br>support@clothingcolussus.com<br>We reply within 2 hours</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="contact-form-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="form-container">
+                    <div class="section-header text-center">
+                        <h2>Send us a Message</h2>
+                    </div>
+                    
+                    <form method="post" action="/contact" class="contact-form">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">
+                                        <i class="fas fa-user"></i> Full Name
+                                    </label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your full name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">
+                                        <i class="fas fa-envelope"></i> Email Address
+                                    </label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email address" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class="fas fa-phone"></i> Phone Number
+                            </label>
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="desc">
+                                <i class="fas fa-comment"></i> Message
+                            </label>
+                            <textarea class="form-control" name="desc" id="desc" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                            <button type="reset" class="btn btn-outline-secondary btn-lg">
+                                <i class="fas fa-redo"></i> Reset Form
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to common questions</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                What are your shipping options?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer standard shipping (3-5 business days), express shipping (1-2 business days), and overnight shipping for urgent orders. Free shipping is available on orders over $50.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                What is your return policy?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer a 30-day return policy for all items in their original condition. Returns are free and we provide prepaid shipping labels for your convenience.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Do you offer international shipping?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we ship to most countries worldwide. International shipping rates and delivery times vary by location. You can check rates during checkout.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                How can I track my order?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Once your order ships, you'll receive a tracking number via email. You can also track your order through your account dashboard on our website.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.contact-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.contact-hero .lead {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.contact-stats {
+    margin-top: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.stat-item i {
+    font-size: 2rem;
+    color: #fbbf24;
+    margin-right: 1rem;
+}
+
+.stat-item h4 {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.stat-item p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.hero-image img {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.contact-info-section {
+    padding: 3rem 0;
+    background: white;
+    margin-bottom: 3rem;
+}
+
+.info-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.info-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.info-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+.contact-form-section {
+    padding: 3rem 0;
+    background: var(--light-bg);
+    margin-bottom: 3rem;
+}
+
+.form-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.section-header {
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--gray-600);
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-group label i {
+    color: var(--secondary-color);
+    margin-right: 0.5rem;
+}
+
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.form-control::placeholder {
+    color: var(--gray-500);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-outline-secondary {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background: #6c757d;
+    border-color: #6c757d;
+    transform: translateY(-2px);
+}
+
+.faq-section {
+    padding: 3rem 0;
+    background: white;
+}
+
+.accordion-item {
+    border: none;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.accordion-button {
+    background: white;
+    color: var(--primary-color);
+    font-weight: 600;
+    border: none;
+    padding: 1.5rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .form-container {
+        padding: 2rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .stat-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stat-item i {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+</style>
+
 {% endblock body %}
